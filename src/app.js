@@ -28,12 +28,20 @@ router.post("/customers", function (req, res) {
     var customer = req.body;
 
     if (!customer.ref) {
-        res.send(400, { "error" : "no customer reference set" });
+        res.status(400)
+            .send({ "error" : "no customer reference set" });
+        return;
+    }
+
+    if (!customer.name) {
+        res.status(400)
+            .send,({ "error" : "no customer name set" });
         return;
     }
 
     if (!uuid.is(customer.ref)) {
-        res.send(400, { "error" : "bad format for customer reference" });
+        res.status(400)
+            .send({ "error" : "bad format for customer reference" });
         return;
     }
 
@@ -43,7 +51,7 @@ router.post("/customers", function (req, res) {
 
 
     if (duplicate) {
-        res.send(409);
+        res.sendStatus(409);
         return;
     }
 
@@ -65,9 +73,10 @@ router.get("/customers/:customerId", function (req, res) {
     });
 
     if (!customer) {
-        res.send(404);
+        res.sendStatus(404);
     } else {
-        res.json(200, customer);
+        res.status(200)
+            .json(customer);
     }
 });
 

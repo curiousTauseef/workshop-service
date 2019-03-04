@@ -70,7 +70,7 @@ paths:
         201:
           description: customer created
         400:
-          description: invalid input, object invalid
+          description: invalid input, object invalid, for example ref is not defined
         409:
           description: an existing customer already exists
 definitions:
