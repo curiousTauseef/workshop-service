@@ -1,0 +1,89 @@
+swagger: '2.0'
+info:
+  description: Simple service to manage customers
+  version: 1.0.0
+  title: Customer management
+  contact:
+    email: richard@rgparkins.co.uk
+
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+paths:
+  /customers/{customerId}:
+    get:
+      description: Returns a single recon
+      parameters:
+      - name: customerId
+        description: the custiomer id
+        in: path
+        required: true
+        type: string
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: the recon
+          schema:
+            "$ref": "#/definitions/Customer"
+        '404':
+          description: "resource cannot be found"
+  /customers:
+    get:
+      operationId: searchCustomer
+      description: search endpoint
+      parameters:
+      - name: textsearch
+        description: search for customers starting with
+        in: query
+        required: true
+        type: string
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        200 :
+          description: the recon
+          schema:
+            type: array
+            items:
+              $ref: "#/definitions/Customer"
+    post:
+      summary: adds a customer to the system
+      operationId: addCustomer
+      description: Adds a customer to the system
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: customer
+        description: Customer to add
+        schema:
+          $ref: '#/definitions/Customer'
+      responses:
+        201:
+          description: customer created
+        400:
+          description: invalid input, object invalid
+        409:
+          description: an existing customer already exists
+definitions:
+  Customer:
+    type: object
+    required:
+    - name
+    - ref
+    properties:
+      ref:
+        type: string
+        format: uuid
+        example: d290f1ee-6c54-4b01-90e6-d701748f0851
+      name:
+        type: string
+        example: Widget Adapter

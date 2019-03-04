@@ -1,0 +1,15 @@
+{
+  "name": "workshop-service",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Richard Parkins <richard@rgparkins.co.uk>",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node $NODE_DEBUG_OPTION src/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.13.3",
+    "uuidv4": "^2.0.0"
+  }
+}
