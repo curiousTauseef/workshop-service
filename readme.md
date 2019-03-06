@@ -6,7 +6,7 @@ no contract tests from its consumers.
 
 ## Getting Started
 
-Clone this repository and create a local branch.
+Fork this repository
 
 ### Prerequisites
 
@@ -19,10 +19,11 @@ Clone this repository and create a local branch.
 1. Create a simple boilerplate app (in any language that can be run in docker). You can get a quick example
 [here](https://github.com/ComparetheMarket/engineering.consumer-contract-testing.docker)
 2. Take a look at the swagger spec in this repo and create a stub against this.
-3. Create some feature files and fixture to run against this stub
-
-Instructions and standards on how to structure your contract tests can be found [here](https://github.com/ComparetheMarket/engineering.consumer-contract-testing.docker)
+3. Create the files required by the standards to run consumer contrct tests against your stub.
+4. PR your features, fixtures, Dockerfile and test.sh into your consumer named directory on the service.
+4. Get your feature tests to pass
 
 You can see a case study [here](https://engineering-docs-test.vassily.io/docs/testing/consumer-contract-testing/case-study/) with step by step instructions.
 
 If you are having trouble pulling the ECR from AWS you can use [this](https://cloud.docker.com/u/rgparkins/repository/docker/rgparkins/contract-testing-base) 
+
