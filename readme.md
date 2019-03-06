@@ -4,88 +4,23 @@ Welcome to consumer contract testing, you will have all; the necessary informati
 help guide you through the workshop. This repo contains a simple customer service that has
 no contract tests from its consumers.
 
-The idea is 
-
 ## Getting Started
 
-Please either clone this directory or download the latest release.
+Clone this repository and create a local branch.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+1. You will need to have docker version 18.09.2, build 6247962 or greater installed
+2. You will need to be able to pull from an AWS ECR for this workshop.
 
-```
-Give examples
-```
 
-### Installing
+### Steps
 
-A step by step series of examples that tell you how to get a development env running
+1. Create a simple boilerplate app (in any language that can be run in docker). You can get a quick exmaple
+[here](https://github.com/ComparetheMarket/engineering.consumer-contract-testing.docker)
+2. Take a look at the swagger spec in this repo and create a stub against this.
+3. Create some feature files and fixture to run against this stub
 
-Say what the step will be
+You can see a case study [here](https://engineering-docs-test.vassily.io/docs/testing/consumer-contract-testing/case-study/) with step by step instructions
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+If you are having trouble pulling the ECR from AWS you can use [this](https://cloud.docker.com/u/rgparkins/repository/docker/rgparkins/contract-testing-base) 
