@@ -21,6 +21,8 @@ Clone this repository and create a local branch.
 2. Take a look at the swagger spec in this repo and create a stub against this.
 3. Create some feature files and fixture to run against this stub
 
-You can see a case study [here](https://engineering-docs-test.vassily.io/docs/testing/consumer-contract-testing/case-study/) with step by step instructions
+Instructions on the readme [here](https://github.com/ComparetheMarket/engineering.consumer-contract-testing.docker)
+
+You can see a case study [here](https://engineering-docs-test.vassily.io/docs/testing/consumer-contract-testing/case-study/) with step by step instructions.
 
 If you are having trouble pulling the ECR from AWS you can use [this](https://cloud.docker.com/u/rgparkins/repository/docker/rgparkins/contract-testing-base) 
