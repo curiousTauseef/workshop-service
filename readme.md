@@ -1,6 +1,6 @@
 # Consumer contract testing workshop
 
-Welcome to consumer contract testing, you will have all; the necessary information in this readme to 
+Welcome to consumer contract testing, you will have all the necessary information in this readme to 
 help guide you through the workshop. This repo contains a simple customer service that has
 no contract tests from its consumers.
 
