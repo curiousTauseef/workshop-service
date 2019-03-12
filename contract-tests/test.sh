@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# SPIN up the system
+
 for d in ./*/
 do
      DIR=$(echo ${d} | tr -d '/' | tr -d './')

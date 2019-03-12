@@ -1,0 +1,21 @@
+{
+  "$id": "https://example.com/person.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Customer",
+  "type": "object",
+  "required": [ "id", "firstname", "surname" ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "The id of the resource created"
+    },
+    "surname": {
+      "type": "string",
+      "description": "The surname of the customer"
+    },
+    "firstname": {
+      "type": "string",
+      "description": "The firstname of the customer"
+    }
+  }
+}

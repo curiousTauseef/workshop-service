@@ -11,6 +11,14 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
 
 paths:
+  /ping:
+    get:
+      description: Returns a status code to indicate we are here
+      responses:
+        '200':
+          description: return status code with
+          schema:
+            type: string
   /customers/{customerId}:
     get:
       description: Returns a single recon

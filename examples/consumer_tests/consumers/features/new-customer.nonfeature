@@ -1,0 +1,15 @@
+@ignore
+Feature: Creating and fetching a customer
+
+  Scenario: Creating a new customer
+    Given I pipe contents of file ./fixtures/customer.json to body
+    And I set Content-Type header to application/json
+    When I POST to /customers
+    Then response code should be 201
+    And response header location should exist
+    And I store the value of response header location as location in global scope
+
+  Scenario: retrieving a customer based on id
+    When I GET `location`
+    Then response code should be 200
+    And response body should be valid according to schema file ./fixtures/customer.schema.json

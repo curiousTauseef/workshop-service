@@ -1,0 +1,6 @@
+@ignore
+Feature: No data for customer
+  Scenario: retrieving a non-existant customer
+    Given I GET /customers/unknown-id
+    Then response code should be 404
+    And response header location should not exist
